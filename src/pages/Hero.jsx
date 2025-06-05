@@ -1,13 +1,26 @@
 import React from "react";
 import { motion } from "framer-motion";
 import profilepic from "../assets/images/profilepic.png";
+import logoBg from "../assets/images/A_geometric_logo_design_depicting_a_digital_circuit_board_head_on.webp"; // اضافه کردن لوگو
 
 export const Hero = () => {
   return (
     <div className="relative overflow-clip min-h-screen text-white bg-[linear-gradient(to_bottom,#000,#071E18_35%,#208A65_67%,#35FB8E_85%)]">
 
+      {/* بک‌گراند لوگو با شفافیت */}
       <div
-        className="absolute bg-black w-[2400px] h-[1000px] rounded-[50%] left-1/2 -translate-x-1/2 
+        className="absolute inset-0 w-full h-full z-0 pointer-events-none"
+        style={{
+          backgroundImage: `url(${logoBg})`,
+          backgroundSize: "cover",
+          backgroundPosition: "center",
+          opacity: 0.13,
+        }}
+      />
+
+      {/* نیم‌دایره پشت همه چیز */}
+      <div
+        className="absolute z-0 bg-black w-[2400px] h-[1000px] rounded-[50%] left-1/2 -translate-x-1/2 
                       bg-[radial-gradient(closest-side,#000_85%,#249974)] top-[450px]
                       border-[1px] border-[#8CD6DE]/30"
       />
@@ -21,11 +34,6 @@ export const Hero = () => {
             className="relative mb-8 mt-24"
           >
             <div className="absolute inset-0 bg-gradient-to-b from-emerald-500/20 to-transparent rounded-full blur-3xl"></div>
-            <img
-              src={profilepic}
-              alt="John Doe"
-              className="w-[250px] relative z-10"
-            />
           </motion.div>
 
           <motion.div
