@@ -35,7 +35,7 @@ export const Hero = () => {
             className="max-w-2xl"
           >
             <h1 className="text-6xl md:text-7xl font-bold tracking-tighter mb-4">
-              Hi, I am <br /> Alireza <span className="text-emerald-400">Doe</span>
+              Hi, We are <br /> Assistio <span className="text-emerald-400">AI</span>
             </h1>
             <p className="text-xl text-white/80 max-w-lg mx-auto leading-relaxed mb-6">
               I am a fullstack developer focusing on creating websites that
