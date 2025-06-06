@@ -11,7 +11,12 @@ export const Footer = () => {
   return (
     <footer className="py-8" id="contact">
       <div className="max-w-[1200px] mx-auto px-4">
-        <div className="flex items-center justify-between flex-col md:flex-row">
+        <div
+          className="flex items-center justify-center flex-col lg:flex-row text-center"
+          style={{
+            fontFamily: "var(--fontara-font), Poppins, sans-serif !important",
+          }}
+        >
           <div>
             <h2 className="md:text-7xl text-4xl font-bold mb-10 text-white/50">
               Get in <span className="text-gray-400">touch</span>
@@ -36,7 +41,6 @@ export const Footer = () => {
                 +99 (0) 78 897 9999
               </a>
             </div>
-
             <div className="text-lg mb-8">
               <p className="font-bold">Office</p>
               <p>Street 98 98987</p>
@@ -47,18 +51,23 @@ export const Footer = () => {
         </div>
 
         <div className="relative z-10 text-center mt-8 py-12">
-          <h1 className="hidden md:block text-[10rem] md:text-[12rem] lg:text-[15rem] font-bold text-white opacity-10">
-            JOHNDOE
+          <h1 className="hidden md:block text-[6rem] md:text-[8rem] lg:text-[10rem] font-bold text-white opacity-10">
+            Assistio AI
           </h1>
 
-          <h1 className="md:hidden relative text-9xl md:text-[12rem] lg:text-[15rem] font-bold text-white opacity-10">
-            JOHN
+          <h1 className="md:hidden relative text-7xl sm:text-[10rem] lg:text-[15rem] font-bold text-white opacity-10">
+            Assistio
             <br />
-            DOE
+            AI
           </h1>
         </div>
 
-        <div className="relative mt-12 container flex sm:justify-between justify-center items-center gap-10 max-sm:flex-col">
+        <div
+          className="relative mt-12 w-full max-w-full flex sm:justify-between justify-center items-center gap-10 max-sm:flex-col"
+          style={{
+            fontFamily: "var(--fontara-font), Poppins, sans-serif !important",
+          }}
+        >
           <p className="text-gray-200 caption text-n-4 lg:block">
             © 2024. All rights reserved.
           </p>

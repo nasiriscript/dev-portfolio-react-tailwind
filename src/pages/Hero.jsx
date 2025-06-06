@@ -5,33 +5,35 @@ import logoBg from "../assets/images/A_geometric_logo_design_depicting_a_digital
 
 export const Hero = () => {
   return (
-    <div className="relative overflow-clip min-h-screen text-white bg-[linear-gradient(to_bottom,#000,#071E18_35%,#208A65_67%,#35FB8E_85%)]">
-
+    <div className="w-full md:w-full lg:w-auto xl:w-auto relative overflow-clip min-h-[100svh] text-white bg-[linear-gradient(to_bottom,#000,#071E18_35%,#208A65_67%,#35FB8E_85%)]">
       {/* بک‌گراند لوگو با شفافیت */}
-      <div
-        className="absolute inset-0 w-full h-full z-0 pointer-events-none"
-        style={{
-          backgroundImage: `url(${logoBg})`,
-          backgroundSize: "cover",
-          backgroundPosition: "center",
-          opacity: 0.13,
-        }}
-      />
+<div
+  className="absolute inset-0 w-full h-full z-0 pointer-events-none"
+  style={{
+    backgroundImage: `url(${logoBg})`,
+    backgroundSize: "min(300%,2048px)",
+    backgroundPosition: "center",
+    backgroundRepeat: "no-repeat",
+    opacity: 0.08
+  }}
+/>
+
+
 
       {/* نیم‌دایره پشت همه چیز */}
       <div
-        className="absolute z-0 bg-black w-[2400px] h-[1000px] rounded-[50%] left-1/2 -translate-x-1/2 
+        className="absolute z-0 bg-black w-[2400px] h-[1500px] rounded-[50%] left-1/2 -translate-x-1/2 
                       bg-[radial-gradient(closest-side,#000_85%,#249974)] top-[450px]
                       border-[1px] border-[#8CD6DE]/30"
       />
 
-      <div className="container relative mx-auto px-4 pt-12 pb-24">
-        <div className="flex flex-col items-center justify-center text-center z-10">
+      <div className="container relative mx-auto px-4 pt-8 md:pt-12 pb-12 md:pb-24 min-h-[100svh] flex items-center">
+        <div className="flex flex-col items-center justify-center text-center z-10 w-full">
           <motion.div
             initial={{ opacity: 0, scale: 0.5 }}
             animate={{ opacity: 1, scale: 1 }}
             transition={{ duration: 0.8 }}
-            className="relative mb-8 mt-24"
+            className="relative mb-4 md:mb-8 mt-12 md:mt-24"
           >
             <div className="absolute inset-0 bg-gradient-to-b from-emerald-500/20 to-transparent rounded-full blur-3xl"></div>
           </motion.div>
@@ -40,14 +42,33 @@ export const Hero = () => {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
-            className="max-w-2xl"
+            className="max-w-2xl mx-auto"
           >
-            <h1 className="text-6xl md:text-7xl font-bold tracking-tighter mb-4">
-              Hi, We are <br /> Assistio <span className="text-emerald-400">AI</span>
+            <h1 className="text-6xl md:text-7xl font-bold tracking-tighter mb-28">
+              Hi, We are <br /> Assistio{" "}
+              <motion.span
+  initial={{ filter: "drop-shadow(0px 0px 4px rgba(34,197,94,0.4))" }}
+  animate={{
+    filter: [
+      "drop-shadow(0px 0px 2px rgba(34,197,94,0.4))",
+      "drop-shadow(0px 0px 8px rgba(22,160,72,0.6))",
+      "drop-shadow(0px 0px 2px rgba(34,197,94,0.4))"
+    ]
+  }}
+  transition={{
+    duration: 2,
+    repeat: Infinity,
+    repeatType: "loop",
+    ease: "easeInOut"
+  }}
+  className="text-emerald-400"
+>
+  AI
+</motion.span>
             </h1>
-            <p className="text-xl text-white/80 max-w-lg mx-auto leading-relaxed mb-6">
-              I am a fullstack developer focusing on creating websites that
-              provides user with best experience.
+            <p className="text-xl text-white/80 max-w-lg mx-auto leading-relaxed mb-12 text-shadow-lg drop-shadow-[0_0px_2px_rgba(200,255,200,0.5)]">
+        Welcome to Assistio AI, where we harness the power of artificial intelligence to
+transform your ideas into reality.
             </p>
 
             <div className="flex gap-4 justify-center">
@@ -66,18 +87,6 @@ export const Hero = () => {
             </div>
           </motion.div>
         </div>
-
-        <motion.div
-          animate={{
-            y: [0, 15, 0],
-          }}
-          transition={{
-            duration: 3,
-            repeat: Infinity,
-            ease: "easeInOut",
-          }}
-          className="absolute bottom-16 right-1/3 w-96 h-96 bg-emerald-500/10 rounded-full blur-xl"
-        />
       </div>
     </div>
   );
