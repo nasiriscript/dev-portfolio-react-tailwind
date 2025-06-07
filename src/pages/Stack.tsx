@@ -1,4 +1,4 @@
-import { useEffect, lazy, Suspense } from "react";
+import { lazy, Suspense } from "react";
 import { SiFramer, SiFigma, SiReact, SiNodedotjs } from "react-icons/si";
 import { FaLemon } from "react-icons/fa";
 import { useInView } from "react-intersection-observer";
