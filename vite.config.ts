@@ -12,6 +12,12 @@ export default defineConfig({
     build: {
         sourcemap: true,
         minify: 'terser',
+        terserOptions: {
+            compress: {
+                drop_console: true,
+                drop_debugger: true
+            }
+        },
         rollupOptions: {
             output: {
                 manualChunks: {
@@ -25,4 +31,10 @@ export default defineConfig({
         port: 3000,
         open: true,
     },
+    optimizeDeps: {
+        include: ['react', 'react-dom'],
+    },
+    css: {
+        devSourcemap: true,
+    }
 }); 
