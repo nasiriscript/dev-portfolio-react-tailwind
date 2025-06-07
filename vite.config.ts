@@ -15,14 +15,11 @@ export default defineConfig({
         rollupOptions: {
             output: {
                 manualChunks: {
-                    'vendor': ['react', 'react-dom'],
-                    'framer-motion': ['framer-motion'],
-                    'react-icons': ['react-icons'],
-                    'react-intersection-observer': ['react-intersection-observer']
+                    vendor: ['react', 'react-dom'],
+                    animations: ['framer-motion'],
                 },
             },
         },
-        chunkSizeWarningLimit: 1000,
     },
     server: {
         port: 3000,

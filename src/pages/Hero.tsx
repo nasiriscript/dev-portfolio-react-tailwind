@@ -5,19 +5,19 @@ import logoBg from "../assets/images/A_geometric_logo_design_depicting_a_digital
 export const Hero: React.FC = () => {
   return (
     <div className="w-full md:w-full lg:w-auto xl:w-auto relative overflow-clip min-h-[100svh] text-white bg-[linear-gradient(to_bottom,#000,#071E18_35%,#208A65_67%,#35FB8E_85%)]">
-      {/* Optimize background image loading */}
+      {/* بک‌گراند لوگو با شفافیت */}
       <div
         className="absolute inset-0 w-full h-full z-0 pointer-events-none"
         style={{
           backgroundImage: `url(${logoBg})`,
-          backgroundSize: "cover",
+          backgroundSize: "min(300%,2048px)",
           backgroundPosition: "center",
           backgroundRepeat: "no-repeat",
-          opacity: 0.08,
-          willChange: "transform",
-          contentVisibility: "auto"
+          opacity: 0.08
         }}
       />
+
+
 
       {/* نیم‌دایره پشت همه چیز */}
       <div
@@ -29,18 +29,18 @@ export const Hero: React.FC = () => {
       <div className="container relative mx-auto px-4 pt-8 md:pt-12 pb-12 md:pb-24 min-h-[100svh] flex items-center">
         <div className="flex flex-col items-center justify-center text-center z-10 w-full">
           <motion.div
-            initial={{ opacity: 0, scale: 0.95 }}
+            initial={{ opacity: 0, scale: 0.5 }}
             animate={{ opacity: 1, scale: 1 }}
-            transition={{ duration: 0.5 }}
+            transition={{ duration: 0.8 }}
             className="relative mb-4 md:mb-8 mt-12 md:mt-24"
           >
-            <div className="absolute inset-0 bg-gradient-to-b from-emerald-500/20 to-transparent rounded-full blur-2xl"></div>
+            <div className="absolute inset-0 bg-gradient-to-b from-emerald-500/20 to-transparent rounded-full blur-3xl"></div>
           </motion.div>
 
           <motion.div
-            initial={{ opacity: 0, y: 10 }}
+            initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.5 }}
+            transition={{ duration: 0.8 }}
             className="max-w-2xl mx-auto"
           >
             <h1 className="text-6xl md:text-7xl font-bold tracking-tighter mb-24">
@@ -71,18 +71,18 @@ export const Hero: React.FC = () => {
             </p>
 
             <div className="flex gap-4 justify-center">
-              <motion.div
+              <motion.button
                 whileHover={{ scale: 1.05 }}
                 className="px-6 py-3 bg-emerald-500 rounded-full font-medium hover:bg-emerald-600 transition-colors"
               >
                 Contact Me
-              </motion.div>
-              <motion.div
+              </motion.button>
+              <motion.button
                 whileHover={{ scale: 1.05 }}
                 className="px-6 py-3 border border-white/20 rounded-full font-medium hover:bg-white/10 transition-colors"
               >
                 View Work
-              </motion.div>
+              </motion.button>
             </div>
           </motion.div>
         </div>
