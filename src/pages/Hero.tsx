@@ -14,7 +14,8 @@ export const Hero: React.FC = () => {
           backgroundPosition: "center",
           backgroundRepeat: "no-repeat",
           opacity: 0.08,
-          willChange: "transform"
+          willChange: "transform",
+          contentVisibility: "auto"
         }}
       />
 
@@ -30,7 +31,7 @@ export const Hero: React.FC = () => {
           <motion.div
             initial={{ opacity: 0, scale: 0.5 }}
             animate={{ opacity: 1, scale: 1 }}
-            transition={{ duration: 0.8 }}
+            transition={{ duration: 0.5 }}
             className="relative mb-4 md:mb-8 mt-12 md:mt-24"
           >
             <div className="absolute inset-0 bg-gradient-to-b from-emerald-500/20 to-transparent rounded-full blur-3xl"></div>
@@ -39,7 +40,7 @@ export const Hero: React.FC = () => {
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
+            transition={{ duration: 0.5 }}
             className="max-w-2xl mx-auto"
           >
             <h1 className="text-6xl md:text-7xl font-bold tracking-tighter mb-24">
