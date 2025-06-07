@@ -43,7 +43,7 @@ export const Hero: React.FC = () => {
             transition={{ duration: 0.8 }}
             className="max-w-2xl mx-auto"
           >
-            <h1 className="text-6xl md:text-7xl font-bold tracking-tighter mb-24">
+            <h1 className="text-6xl md:text-7xl font-bold tracking-tighter mb-28 mt-12">
               Hi, We are <br /> Assistio{" "}
               <motion.span
                 initial={{ filter: "drop-shadow(0px 0px 4px rgba(34,197,94,0.4))" }}
@@ -65,7 +65,7 @@ export const Hero: React.FC = () => {
                 AI
               </motion.span>
             </h1>
-            <p className="text-xl text-white/80 max-w-lg mx-auto leading-relaxed mb-12 text-shadow-lg drop-shadow-[0_2px_2px_rgba(0,0,0,1)]">
+            <p className="text-xl text-white/80 max-w-lg mx-auto leading-relaxed mb-12">
               Welcome to Assistio AI, where we harness the power of artificial intelligence to
               transform your ideas into reality.
             </p>
