@@ -8,12 +8,12 @@ import { Stack } from "./pages/Stack";
 export default function App() {
   return (
     <>
-      <Navbar/>
-      <Hero/>
-      <About/>
-      <Portfolio/>
-      <Stack/>
-      <Footer/>
+      <Navbar />
+      <Hero />
+      <About />
+      <Portfolio />
+      <Stack />
+      <Footer />
     </>
   )
 }

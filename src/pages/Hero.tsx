@@ -1,22 +1,21 @@
 import React from "react";
 import { motion } from "framer-motion";
-import profilepic from "../assets/images/profilepic.png";
 import logoBg from "../assets/images/A_geometric_logo_design_depicting_a_digital_circuit_board_head_on.webp"; // اضافه کردن لوگو
 
-export const Hero = () => {
+export const Hero: React.FC = () => {
   return (
     <div className="w-full md:w-full lg:w-auto xl:w-auto relative overflow-clip min-h-[100svh] text-white bg-[linear-gradient(to_bottom,#000,#071E18_35%,#208A65_67%,#35FB8E_85%)]">
       {/* بک‌گراند لوگو با شفافیت */}
-<div
-  className="absolute inset-0 w-full h-full z-0 pointer-events-none"
-  style={{
-    backgroundImage: `url(${logoBg})`,
-    backgroundSize: "min(300%,2048px)",
-    backgroundPosition: "center",
-    backgroundRepeat: "no-repeat",
-    opacity: 0.08
-  }}
-/>
+      <div
+        className="absolute inset-0 w-full h-full z-0 pointer-events-none"
+        style={{
+          backgroundImage: `url(${logoBg})`,
+          backgroundSize: "min(300%,2048px)",
+          backgroundPosition: "center",
+          backgroundRepeat: "no-repeat",
+          opacity: 0.08
+        }}
+      />
 
 
 
@@ -47,28 +46,28 @@ export const Hero = () => {
             <h1 className="text-6xl md:text-7xl font-bold tracking-tighter mb-24">
               Hi, We are <br /> Assistio{" "}
               <motion.span
-  initial={{ filter: "drop-shadow(0px 0px 4px rgba(34,197,94,0.4))" }}
-  animate={{
-    filter: [
-      "drop-shadow(0px 0px 2px rgba(34,197,94,0.4))",
-      "drop-shadow(0px 0px 8px rgba(22,160,72,0.6))",
-      "drop-shadow(0px 0px 2px rgba(34,197,94,0.4))"
-    ]
-  }}
-  transition={{
-    duration: 2,
-    repeat: Infinity,
-    repeatType: "loop",
-    ease: "easeInOut"
-  }}
-  className="text-emerald-400"
->
-  AI
-</motion.span>
+                initial={{ filter: "drop-shadow(0px 0px 4px rgba(34,197,94,0.4))" }}
+                animate={{
+                  filter: [
+                    "drop-shadow(0px 0px 2px rgba(34,197,94,0.4))",
+                    "drop-shadow(0px 0px 8px rgba(22,160,72,0.6))",
+                    "drop-shadow(0px 0px 2px rgba(34,197,94,0.4))"
+                  ]
+                }}
+                transition={{
+                  duration: 2,
+                  repeat: Infinity,
+                  repeatType: "loop",
+                  ease: "easeInOut"
+                }}
+                className="text-emerald-400"
+              >
+                AI
+              </motion.span>
             </h1>
             <p className="text-xl text-white/80 max-w-lg mx-auto leading-relaxed mb-12 text-shadow-lg drop-shadow-[0_2px_2px_rgba(0,0,0,1)]">
-        Welcome to Assistio AI, where we harness the power of artificial intelligence to
-transform your ideas into reality.
+              Welcome to Assistio AI, where we harness the power of artificial intelligence to
+              transform your ideas into reality.
             </p>
 
             <div className="flex gap-4 justify-center">

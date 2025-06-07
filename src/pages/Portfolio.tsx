@@ -1,4 +1,3 @@
-import React from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { useState } from "react";
 import proj1 from "../assets/images/proj9.png";
@@ -40,9 +39,9 @@ const projects = [
 ];
 
 export const Portfolio = () => {
-  const [expandedIndex, setExpandedIndex] = useState(null);
+  const [expandedIndex, setExpandedIndex] = useState<number | null>(null);
 
-  const toggleExpand = (index) => {
+  const toggleExpand = (index: number) => {
     setExpandedIndex(expandedIndex === index ? null : index);
   };
 
@@ -72,10 +71,9 @@ export const Portfolio = () => {
                   <span className="text-3xl font-light text-emerald-300">
                     0{index + 1}
                   </span>
-                  <FiChevronDown 
-                    className={`w-6 h-6 transform transition-transform ${
-                      expandedIndex === index ? "rotate-180" : ""
-                    }`}
+                  <FiChevronDown
+                    className={`w-6 h-6 transform transition-transform ${expandedIndex === index ? "rotate-180" : ""
+                      }`}
                   />
                 </div>
               </div>

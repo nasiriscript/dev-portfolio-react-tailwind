@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import { useEffect } from "react";
 import { SiFramer, SiFigma, SiReact, SiNodedotjs } from "react-icons/si";
 import { FaLemon } from "react-icons/fa";
 import { motion, useAnimation } from "framer-motion";
