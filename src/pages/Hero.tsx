@@ -5,7 +5,7 @@ import logoBg from "../assets/images/A_geometric_logo_design_depicting_a_digital
 export const Hero: React.FC = () => {
   return (
     <div className="w-full md:w-full lg:w-auto xl:w-auto relative overflow-clip min-h-[100svh] text-white bg-[linear-gradient(to_bottom,#000,#071E18_35%,#208A65_67%,#35FB8E_85%)]">
-      {/* بک‌گراند لوگو با شفافیت */}
+      {/* Optimized background image loading */}
       <div
         className="absolute inset-0 w-full h-full z-0 pointer-events-none"
         style={{
@@ -13,11 +13,10 @@ export const Hero: React.FC = () => {
           backgroundSize: "min(300%,2048px)",
           backgroundPosition: "center",
           backgroundRepeat: "no-repeat",
-          opacity: 0.08
+          opacity: 0.08,
+          willChange: "transform"
         }}
       />
-
-
 
       {/* نیم‌دایره پشت همه چیز */}
       <div
@@ -28,19 +27,21 @@ export const Hero: React.FC = () => {
 
       <div className="container relative mx-auto px-4 pt-8 md:pt-12 pb-12 md:pb-24 min-h-[100svh] flex items-center">
         <div className="flex flex-col items-center justify-center text-center z-10 w-full">
+          {/* Deferred animation for the logo glow */}
           <motion.div
-            initial={{ opacity: 0, scale: 0.5 }}
-            animate={{ opacity: 1, scale: 1 }}
-            transition={{ duration: 0.8 }}
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ duration: 0.5, delay: 0.2 }}
             className="relative mb-4 md:mb-8 mt-12 md:mt-24"
           >
             <div className="absolute inset-0 bg-gradient-to-b from-emerald-500/20 to-transparent rounded-full blur-3xl"></div>
           </motion.div>
 
+          {/* Main content with optimized animations */}
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
+            transition={{ duration: 0.5 }}
             className="max-w-2xl mx-auto"
           >
             <h1 className="text-6xl md:text-7xl font-bold tracking-tighter mb-28 mt-12">

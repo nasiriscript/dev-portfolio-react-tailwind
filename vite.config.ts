@@ -23,16 +23,18 @@ export default defineConfig({
                 manualChunks: {
                     vendor: ['react', 'react-dom'],
                     animations: ['framer-motion'],
+                    icons: ['react-icons'],
                 },
             },
         },
+        chunkSizeWarningLimit: 1000,
     },
     server: {
         port: 3000,
         open: true,
     },
     optimizeDeps: {
-        include: ['react', 'react-dom'],
+        include: ['react', 'react-dom', 'framer-motion', 'react-icons'],
     },
     css: {
         devSourcemap: true,
