@@ -1,8 +1,10 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
-
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+:root {
+  --font-primary: 'Poppins', sans-serif;
+}
 
 html {
   scroll-behavior: smooth;
@@ -15,7 +17,17 @@ html {
 }
 
 body {
-  font-family: 'Poppins', sans-serif;
+  font-family: var(--font-primary);
   background-color: #000;
   color: #fff;
+  margin: 0;
+  padding: 0;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Optimize paint operations */
+* {
+  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
 }
