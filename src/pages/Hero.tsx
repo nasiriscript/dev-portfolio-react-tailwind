@@ -10,7 +10,7 @@ export const Hero: React.FC = () => {
         className="absolute inset-0 w-full h-full z-0 pointer-events-none"
         style={{
           backgroundImage: `url(${logoBg})`,
-          backgroundSize: "min(300%,2048px)",
+          backgroundSize: "cover",
           backgroundPosition: "center",
           backgroundRepeat: "no-repeat",
           opacity: 0.08,
@@ -29,16 +29,16 @@ export const Hero: React.FC = () => {
       <div className="container relative mx-auto px-4 pt-8 md:pt-12 pb-12 md:pb-24 min-h-[100svh] flex items-center">
         <div className="flex flex-col items-center justify-center text-center z-10 w-full">
           <motion.div
-            initial={{ opacity: 0, scale: 0.5 }}
+            initial={{ opacity: 0, scale: 0.95 }}
             animate={{ opacity: 1, scale: 1 }}
             transition={{ duration: 0.5 }}
             className="relative mb-4 md:mb-8 mt-12 md:mt-24"
           >
-            <div className="absolute inset-0 bg-gradient-to-b from-emerald-500/20 to-transparent rounded-full blur-3xl"></div>
+            <div className="absolute inset-0 bg-gradient-to-b from-emerald-500/20 to-transparent rounded-full blur-2xl"></div>
           </motion.div>
 
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
+            initial={{ opacity: 0, y: 10 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5 }}
             className="max-w-2xl mx-auto"
